@@ -1,0 +1,28 @@
+<div class="board">
+  <div id="board"></div>
+  <div class="board-menu">
+    <a title="Board Settings" class="nav-toggle" (click)="toggleMenu()">
+      <i class="material-icons">more_vert</i>
+    </a>
+    <section class={{boardMenuItems}}>
+      <a title="Flip Board" (click)="flipBoard()">
+        <i class="material-icons">cached</i>
+      </a><br>
+      <a title="Forward" (click)="goForward()">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </a><br>
+      <a title="Back" (click)="goBack()">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </a><br>
+      <a title="Notation">
+        <i class="material-icons">speaker_notes</i>
+      </a><br>
+      <a title="Engine">
+        <i class="material-icons">computer</i>
+      </a><br>
+      <a title="New Board" (click)="newBoard()">
+        <i class="material-icons">note_add</i>
+      </a>
+    </section>
+  </div>
+</div>

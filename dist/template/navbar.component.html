@@ -1,0 +1,40 @@
+<a class="nav-toggle" (click)="toggleMenu()">
+  <i class="material-icons">menu</i>
+</a>
+
+<nav class="{{classes}}">
+  <a class="nav-toggle" (click)="toggleMenu()">
+    <i class="material-icons">close</i>    
+  </a>
+
+  <div class="nav-container">
+    <section class="nav-item">
+      <span class="nav-item-header" (click)="toggleMenuItem($event)">Play</span>
+      <ul class="nav-item-submenus nav-item-submenus-hidden">
+        <li>Play Computer</li>
+        <li>Play Friend</li>      
+      </ul>
+    </section>
+    <section class="nav-item">
+      <span class="nav-item-header" (click)="toggleMenuItem($event)">Analyze</span>
+      <ul class="nav-item-submenus nav-item-submenus-hidden">
+        <li>New Board</li>
+        <li>Position Setup</li>      
+        <li>Engine</li>        
+      </ul>
+    </section>
+    <section class="nav-item">
+      <span class="nav-item-header">Train</span>
+    </section>
+    <section class="nav-item">
+      <span class="nav-item-header">Settings</span>
+    </section>
+    <section class="nav-item">
+      <span class="nav-item-header" (click)="toggleMenuItem($event)">About</span>
+      <ul class="nav-item-submenus nav-item-submenus-hidden">  
+        <li>About Program</li>
+        <li>Help</li>        
+      </ul>
+    </section>
+  </div>
+</nav>
