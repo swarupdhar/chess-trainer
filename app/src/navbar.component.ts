@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'Navbar',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   private navOpen: boolean = false;
   private classes:string = "";
+  @Output() navEvents = new EventEmitter();
 
   toggleMenu(){
     this.navOpen = ! this.navOpen;
@@ -34,8 +35,11 @@ export class NavbarComponent {
       elm[0].className = 'nav-item-submenus nav-item-submenus-visible';
     }else{
       elm[0].className = 'nav-item-submenus nav-item-submenus-hidden';        
-    }
-    
+    }    
+  }
+
+  sendEvent(e){
+    this.navEvents.emit(e);
   }
 
 }

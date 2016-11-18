@@ -13,6 +13,7 @@ let NavbarComponent = class NavbarComponent {
     constructor() {
         this.navOpen = false;
         this.classes = "";
+        this.navEvents = new core_1.EventEmitter();
     }
     toggleMenu() {
         this.navOpen = !this.navOpen;
@@ -41,7 +42,14 @@ let NavbarComponent = class NavbarComponent {
             elm[0].className = 'nav-item-submenus nav-item-submenus-hidden';
         }
     }
+    sendEvent(e) {
+        this.navEvents.emit(e);
+    }
 };
+__decorate([
+    core_1.Output(), 
+    __metadata('design:type', Object)
+], NavbarComponent.prototype, "navEvents", void 0);
 NavbarComponent = __decorate([
     core_1.Component({
         selector: 'Navbar',

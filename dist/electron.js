@@ -5,7 +5,7 @@ const { app, BrowserWindow } = electron;
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-const MIN_WIDTH = 800, MIN_HEIGHT = 700;
+const MIN_WIDTH = 800, MIN_HEIGHT = 600;
 
 function createWindow () {
   // Create the browser window.

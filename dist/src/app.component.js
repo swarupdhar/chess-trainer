@@ -10,6 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 let AppComponent = class AppComponent {
+    constructor() {
+        this.mode = 'analysis';
+    }
+    handleNavEvents(e) {
+        switch (e) {
+            case 'new-analysis-board':
+                this.mode = 'analysis';
+                break;
+            case 'new-play-comp':
+                //TODO: prompt user for prefs
+                this.mode = 'play';
+                break;
+            case 'new-analysis-board':
+                this.mode = 'analysis';
+                break;
+        }
+    }
 };
 AppComponent = __decorate([
     core_1.Component({

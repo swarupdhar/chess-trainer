@@ -1,12 +1,12 @@
 {
   "name": "chess-trainer",
   "version": "0.0.1",
-  "description": "chess training app",
+  "description": "A chess training app.",
   "scripts": {
     "start": "electron ./dist",
-    "build": "tsc",
+    "compile": "tsc",
     "watch": "tsc --watch",
-    "bundle": "electron-packager ./dist ChessTrainer --out ./product"
+    "pack": "electron-packager ./dist ChessTrainer --out ./product"
   },
   "author": "Swarup Dhar",
   "devDependencies": {

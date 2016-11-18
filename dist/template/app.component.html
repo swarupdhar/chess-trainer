@@ -1,4 +1,5 @@
-<Navbar></Navbar>
+<Navbar (navEvents)="handleNavEvents($event)"></Navbar>
 
 <!-- TODO: structure the rest of the app -->
-<AnalysisBoard></AnalysisBoard>
+<AnalysisBoard *ngIf="mode == 'analysis'"></AnalysisBoard>
+{{mode}}
