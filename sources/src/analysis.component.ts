@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Chess } from './libs/chess';
-import { ChessBoard } from './libs/chessboard';
+import { Chess } from './../libs/chess.js';
+import { ChessBoard } from './../libs/chessboard.js';
 import { Move } from './move';
 
 @Component({

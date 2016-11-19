@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "A chess training app.",
   "scripts": {
-    "start": "electron ./dist",
+    "start": "electron ./app",
     "compile": "tsc",
     "watch": "tsc --watch",
-    "pack": "electron-packager ./dist ChessTrainer --out ./product"
+    "pack": "electron-packager ./app ChessTrainer --out ./dist"
   },
   "author": "Swarup Dhar",
   "devDependencies": {

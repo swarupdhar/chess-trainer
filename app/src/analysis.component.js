@@ -9,15 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const chess_1 = require('./libs/chess');
-const chessboard_1 = require('./libs/chessboard');
+const chess_js_1 = require('./../libs/chess.js');
+const chessboard_js_1 = require('./../libs/chessboard.js');
 const move_1 = require('./move');
 let AnalysisBoardComponent = class AnalysisBoardComponent {
     // TODO: notation and engine analysis
     constructor() {
         this.boardMenuItems = "board-menu-items";
         this.boardID = "board";
-        this.game = new chess_1.Chess();
+        this.game = new chess_js_1.Chess();
         this.rootMove = new move_1.Move(this.game.fen(), '');
         this.headMove = this.rootMove;
         this.config = {
@@ -62,7 +62,7 @@ let AnalysisBoardComponent = class AnalysisBoardComponent {
         };
     }
     ngOnInit() {
-        this.board = chessboard_1.ChessBoard(this.boardID, this.config, 'analysis');
+        this.board = chessboard_js_1.ChessBoard(this.boardID, this.config, 'analysis');
         window.onresize = this.board.resize;
         document.addEventListener('keydown', this.keyListener.bind(this));
     }
@@ -91,7 +91,7 @@ let AnalysisBoardComponent = class AnalysisBoardComponent {
         }
     }
     newBoard() {
-        this.game = new chess_1.Chess();
+        this.game = new chess_js_1.Chess();
         this.rootMove = new move_1.Move(this.game.fen(), '');
         this.headMove = this.rootMove;
         this.board.position(this.headMove.fenPosition);
