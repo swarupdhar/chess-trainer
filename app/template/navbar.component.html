@@ -12,7 +12,7 @@
       <span class="nav-item-header" (click)="toggleMenuItem($event)">Play</span>
       <ul class="nav-item-submenus nav-item-submenus-hidden">
         <li (click)="sendEvent('new-play-comp')">Play Computer</li>
-        <li>Play Friend</li>      
+        <li (click)="sendEvent('new-play-friend')">Play Friend</li>      
       </ul>
     </section>
     <section class="nav-item">

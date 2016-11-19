@@ -6,6 +6,9 @@ import { RouterModule } from "@angular/router"
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar.component";
 import { AnalysisBoardComponent } from './analysis.component';
+import { PlayBoardComponent } from './play.component';
+import { ModalService } from './modal.service';
+import { ModalComponent } from './modal.component';
 
 @NgModule({
   imports:      [ 
@@ -15,8 +18,11 @@ import { AnalysisBoardComponent } from './analysis.component';
   declarations: [ 
     AppComponent, 
     NavbarComponent,
-    AnalysisBoardComponent 
+    AnalysisBoardComponent,
+    PlayBoardComponent,
+    ModalComponent
   ],
+  providers: [ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

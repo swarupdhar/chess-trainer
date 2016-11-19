@@ -1,5 +1,10 @@
 <Navbar (navEvents)="handleNavEvents($event)"></Navbar>
+<Modal
+[title] = " 'Test!' "
+></Modal>
+
 
 <!-- TODO: structure the rest of the app -->
 <AnalysisBoard *ngIf="mode == 'analysis'"></AnalysisBoard>
-{{mode}}
+<PlayBoard *ngIf="mode == 'play'"></PlayBoard>
+<h3>{{mode}}</h3>
