@@ -12,6 +12,15 @@ const core_1 = require('@angular/core');
 let AppComponent = class AppComponent {
     constructor() {
         this.mode = 'analysis';
+        this.modalSetting = {
+            isOpen: false,
+            title: "",
+            body: "",
+            footer: ""
+        };
+    }
+    toggleModal() {
+        this.modalSetting.isOpen = !this.modalSetting.isOpen;
     }
     handleNavEvents(e) {
         switch (e) {
@@ -20,7 +29,13 @@ let AppComponent = class AppComponent {
                 break;
             case 'new-play-comp':
                 //TODO: prompt user for prefs
+                this.modalSetting.title = 'Play Computer';
+                this.modalSetting.body = `testing`;
+                this.modalSetting.footer = 'More tests';
+                this.toggleModal();
                 this.mode = 'play';
+                break;
+            case 'new-play-friend':
                 break;
             case 'new-analysis-board':
                 this.mode = 'analysis';

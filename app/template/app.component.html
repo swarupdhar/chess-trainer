@@ -1,7 +1,11 @@
 <Navbar (navEvents)="handleNavEvents($event)"></Navbar>
-<Modal
-[title] = " 'Test!' "
-></Modal>
+
+<Modal 
+  *ngIf="modalSetting.isOpen" 
+  [title] = "modalSetting.title" 
+  [body] = "modalSetting.body"
+  [footer] = "modalSetting.footer">
+</Modal>
 
 
 <!-- TODO: structure the rest of the app -->
