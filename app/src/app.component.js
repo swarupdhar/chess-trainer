@@ -14,9 +14,7 @@ let AppComponent = class AppComponent {
         this.mode = 'analysis';
         this.modalSetting = {
             isOpen: false,
-            title: "",
-            body: "",
-            footer: ""
+            type: ''
         };
     }
     toggleModal() {
@@ -29,9 +27,7 @@ let AppComponent = class AppComponent {
                 break;
             case 'new-play-comp':
                 //TODO: prompt user for prefs
-                this.modalSetting.title = 'Play Computer';
-                this.modalSetting.body = `testing`;
-                this.modalSetting.footer = 'More tests';
+                this.modalSetting.type = "test";
                 this.toggleModal();
                 this.mode = 'play';
                 break;
@@ -40,6 +36,12 @@ let AppComponent = class AppComponent {
             case 'new-analysis-board':
                 this.mode = 'analysis';
                 break;
+        }
+    }
+    handleModalEvents(e) {
+        console.log(e);
+        if (e.event == "modal-close") {
+            this.toggleModal();
         }
     }
 };

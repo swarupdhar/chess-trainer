@@ -2,9 +2,8 @@
 
 <Modal 
   *ngIf="modalSetting.isOpen" 
-  [title] = "modalSetting.title" 
-  [body] = "modalSetting.body"
-  [footer] = "modalSetting.footer">
+  [type] = "modalSetting.type"
+  (modalEvents)="handleModalEvents($event)">
 </Modal>
 
 

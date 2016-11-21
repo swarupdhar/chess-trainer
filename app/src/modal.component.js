@@ -13,14 +13,6 @@ let ModalComponent = class ModalComponent {
     constructor() {
         this.modalEvents = new core_1.EventEmitter();
     }
-    ngOnInit() {
-        this.modalTitleElm = document.getElementById('modal-title');
-        this.modalBodyElm = document.getElementById('modal-body');
-        this.modalFooterElm = document.getElementById('modal-footer');
-        this.modalTitleElm.innerHTML = this.title;
-        this.modalBodyElm.innerHTML = this.body;
-        this.modalFooterElm.innerHTML = this.footer;
-    }
     sendEvent(e) {
         this.modalEvents.emit(e);
     }
@@ -28,15 +20,7 @@ let ModalComponent = class ModalComponent {
 __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
-], ModalComponent.prototype, "title", void 0);
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', Object)
-], ModalComponent.prototype, "body", void 0);
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', Object)
-], ModalComponent.prototype, "footer", void 0);
+], ModalComponent.prototype, "type", void 0);
 __decorate([
     core_1.Output(), 
     __metadata('design:type', Object)

@@ -1,6 +1,8 @@
 <div class="modal-background">
   <div class="modal" id="modal">
-    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-title" id="modal-title">
+      <button (click)="sendEvent({event:'modal-close'})" *ngIf=" type == 'test' ">Test!</button>
+    </div>
     <div class="modal-body" id="modal-body"></div>
     <div class="modal-footer" id="modal-footer"></div>
   </div>
