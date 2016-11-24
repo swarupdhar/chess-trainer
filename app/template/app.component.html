@@ -9,5 +9,5 @@
 
 <!-- TODO: structure the rest of the app -->
 <AnalysisBoard *ngIf="mode == 'analysis'"></AnalysisBoard>
-<PlayBoard *ngIf="mode == 'play'"></PlayBoard>
+<PlayBoard *ngIf="mode == 'play'" [settings]="playSettings"></PlayBoard>
 <h3>{{mode}}</h3>

@@ -5,16 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: 'template/app.component.html'
 })
 export class AppComponent {
-// TODO: figure out if I want to create modal services or use electron modals
 
-  public mode:string;
-  public modalSetting;
+  private mode:string;
+  private modalSetting;
+  private playSettings;
 
   constructor(){
     this.mode = 'analysis';
     this.modalSetting = {
       isOpen: false,
       type: ''
+    };
+    this.playSettings = {
+      type: 'play-friend',
+      strength: 0
     };
   }
 
@@ -29,11 +33,13 @@ export class AppComponent {
       break;
       case 'new-play-comp':
         //TODO: prompt user for prefs
-        this.modalSetting.type = "test";
-        this.toggleModal();
+        this.modalSetting.type = "play-comp";
+        // this.toggleModal();
         this.mode = 'play';
       break;
       case 'new-play-friend':
+        this.modalSetting.type = "play-friend";
+        this.mode = 'play';        
       break;
       case 'new-analysis-board':
         this.mode = 'analysis';
